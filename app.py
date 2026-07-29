@@ -195,7 +195,7 @@ def process_frame(frame, results):
             neon_purple = (226, 43, 138)
             color = neon_cyan if cls == 0 else neon_purple 
             
-            # === CHANGED: Thickness ko 2 se kam karke 1 kar diya (Sleek Box) ===
+            # === CHANGED:
             cv2.rectangle(frame, (x1, y1), (x2, y2), color, 1)
             
             # Construct label
@@ -216,7 +216,7 @@ def process_frame(frame, results):
                     # Trajectory line thin (1px)
                     cv2.polylines(frame, [points], isClosed=False, color=color, thickness=1)
             
-            # === CHANGED: Chote Font Scale (0.35) aur compact background header ===
+            # === CHANGED:
             font_scale = 0.35
             font_thickness = 1
             (w, h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, font_scale, font_thickness)
